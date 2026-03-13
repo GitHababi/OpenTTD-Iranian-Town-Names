@@ -74,6 +74,18 @@ town_names(ROOTS) {
     text("Khondab",1),
     text("Avaj",1),
     text("Mianeh",1),
+    text("Shal",1),
+    text("Ardaq",1),
+    text("Abyek",1),
+    text("Kelaye",1),
+    text("Rahnama",1),
+    text("Rostam",1),
+    text("Sangar",1),
+    text("Gilvan",1),
+    text("Damaq",1),
+    text("Garmab",1),
+    text("Saveh",1),
+    text("Aradan",1),
     }
 }
 town_names(STEMS) {
@@ -105,6 +117,14 @@ town_names(STEMS) {
     text("Danesh",1),
     text("Esmat",1),
     text("Karah",1),
+    text("Esfar",1),
+    text("Sagez",1),
+    text("Ziaya",1),
+    text("Shirin",1),
+    text("Shal",1),
+    text("Sohre",1),
+    text("Dast",1),
+    text("Gharq",1),
     }
 }
 
@@ -117,6 +137,13 @@ town_names(NAMES) {
     text("Massoud",1),
     text("Hasan",1),
     text("Javad",1),
+    text("Jamshid",1),
+    text("Bahman",1),
+    text("Bahram",1),
+    text("Saman",1),
+    text("Sasan",1),
+    text("Azar",1),
+    text("Farshad",1),
     text("Reza",1),
     text("Davud",1),
     text("Soleyman",1),
@@ -136,7 +163,7 @@ town_names(PREFIXES) {
     text("Kushk-e ", 1),
     text("Nakhl-e ", 1),
     text("Mazegh-e ", 1),
-    text("Shahr-e ", 2),
+    text("Shahr-e ", 10),
     }
 }
 
@@ -154,6 +181,8 @@ town_names(SUFFIXES) {
     text("deh",1),
     text("zadeh",1),
     text("yeh",1),
+    text("dash",1),
+    text("ahan",1),
     }
 }
 
@@ -161,7 +190,7 @@ town_names(SUFFIXES) {
 town_names(SUFFIXED_NAMES) {
     {
         town_names(STEMS, 10),
-        town_names(ROOTS, 10),
+        town_names(ROOTS, 7),
         town_names(NAMES, 1), // naming after one dude is kinda unlikely
     }
     {
@@ -188,9 +217,9 @@ town_names(PREFIXED_NAMES) {
 town_names {
     styles: string(TTD_MENU_NAME);
     {
-        town_names(MAIN_NAMES,2),
+        town_names(MAIN_NAMES,3),
         town_names(PREFIXED_NAMES,1),
-        town_names(SUFFIXED_NAMES,3),
-        town_names(ROOTS,1)
+        town_names(SUFFIXED_NAMES,6),
+        town_names(ROOTS,4)
     }
 }
