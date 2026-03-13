@@ -1,0 +1,1 @@
+nmlc --grf iran_town_names.grf iran_town_names.nmh
