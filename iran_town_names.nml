@@ -1,71 +1,196 @@
 grf {
 	grfid: "IR\01\01";
-	name: string(STR_GRF_NAME);
-	desc: string(STR_GRF_DESC);
+	name: string(GRF_NAME);
+	desc: string(GRF_DESCRIPTION);
 	version: 0;
 	min_compatible_version: 0;
+}
+
+town_names(MAIN_NAMES) {
+    // Big city names listed by how well known they are
+    // Not an exact science lol
+    {
+    text("Tehran",6),
+    text("Esfahan",6),
+    text("Masshad",6),
+    text("Karaj",6),
+    text("Shiraz",6),
+    text("Tabriz",6),
+    text("Yazd",6),
+    text("Ahvaz",6),
+
+    text("Urmia",4),
+    text("Rasht",4),
+    text("Zahedan",4),
+    text("Hamadan",4),
+    text("Kerman",4),
+    text("Arak",4),
+    
+    text("Zanjan",3),
+    text("Sanandaj",1),
+    text("Qazvin",3),
+    text("Khorramabad",3),
+    text("Gorgan",1),
+    text("Sari",1),
+    text("Nishapur",1),
+    text("Sedeh",1),
+    text("Golestan",1),
+    text("Bushehr",1),
+    text("Birjand",1),
+    text("Ilam",1),
+    text("Semnan",1),
+    text("Jahrom",10), // lol
+    text("Marvdasht",1),
+    text("Gonbad-e Kavus",1),
+    }
+    
+}
+
+town_names(ROOTS) {
+    // Random village names i found
+    {
+    text("Hidaj",1),
+    text("Hirad",1),
+    text("Tureh",1),
+    text("Dorud",1),
+    text("Vanai",1),
+    text("Giyan",1),
+    text("Samen",1),
+    text("Firoozan",1),
+    text("Azna",1),
+    text("Harand",1),
+    text("Sejzi",1),
+    text("Nir",1),
+    text("Golbaf",1),
+    text("Balvard",1),
+    text("Dehaj",1),
+    text("Siriz",1),
+    text("Taft",1),
+    text("Natanz",1),
+    text("Zavareh",1),
+    text("Qamsar",1),
+    text("Vazvan",1),
+    text("Mahalat",1),
+    text("Khondab",1),
+    text("Avaj",1),
+    text("Mianeh",1),
+    }
+}
+town_names(STEMS) {
+    // Roots that require either a suffix or prefix to go with
+    {
+    text("Najaf",1),
+    text("Sefid",1),
+    text("Bad",1),
+    text("Safa",1),
+    text("Mehr",1),
+    text("Targh",1),
+    text("Mah",1),
+    text("Kamal",1),
+    text("Mehe",1),
+    text("Ab",1),
+    text("Fulad",1),
+    text("Zarrin",1),
+    text("Shah",1),
+    text("Gol",1),
+    text("Tufan",1),
+    text("Khorram",1),
+    text("Soltan",1),
+    text("Zeida",1),
+    text("Khurs",1),
+    text("Amin",1),
+    text("Dolat",1),
+    text("Qahjavar",1),
+    text("Eslam",1),
+    text("Danesh",1),
+    text("Esmat",1),
+    text("Karah",1),
+    }
+}
+
+town_names(NAMES) {
+    // These are roots that are actually just names, they need a prefix to go with them
+    {
+    text("Jafar",1),
+    text("Ali",1),
+    text("Hossein",1),
+    text("Massoud",1),
+    text("Hasan",1),
+    text("Javad",1),
+    text("Reza",1),
+    text("Davud",1),
+    text("Soleyman",1),
+    text("Hafez",1),
+
+    }
+}
+
+town_names(PREFIXES) {
+    {
+    text("Bandar ",10),
+    text("Qaleh ", 1),
+    text("Chah-e ", 5),
+    text("Bandar-e ",1),
+    text("Takht-e ", 5),
+    text("Ghal-e ", 1),
+    text("Kushk-e ", 1),
+    text("Nakhl-e ", 1),
+    text("Mazegh-e ", 1),
+    text("Shahr-e ", 2),
+    }
+}
+
+
+town_names(SUFFIXES) {
+    {
+    text("abad",1),
+    text("shahr",1),
+    text("ganj",1),
+    text("dasht",1),
+    text("sar",1),
+    text("stan",1),
+    text("kand",1),
+    text("rud",1),
+    text("deh",1),
+    text("zadeh",1),
+    text("yeh",1),
+    }
+}
+
+
+town_names(SUFFIXED_NAMES) {
+    {
+        town_names(STEMS, 10),
+        town_names(ROOTS, 10),
+        town_names(NAMES, 1), // naming after one dude is kinda unlikely
+    }
+    {
+        town_names(SUFFIXES, 1),
+    }
+}
+
+town_names(PREFIXED_NAMES) {
+    {
+        town_names(PREFIXES, 1),
+    }
+    {
+        town_names(STEMS, 8),
+        town_names(ROOTS, 3),
+        town_names(NAMES, 5), // naming after one dude is kinda unlikely
+    }
+    {
+        text("",10),
+        town_names(SUFFIXES, 1),
+    }
+    
 }
 
 town_names {
     styles: string(TTD_MENU_NAME);
     {
-        town_names(MAIN_NAMES,1),
-        town_names(PREFIX_ROOT_SUFFIX,2)
-    }
-}
-
-town_names(MAIN_NAMES) {
-
-}
-
-town_names(ROOTS) {
-
-}
-
-town_names(ROOTS_V) {
-
-}
-
-town_names(V_ROOTS) {
-
-}
-
-town_names(V_ROOTS_V) {
-
-}
-
-town_names(PREFIXES) {
-
-}
-
-town_names(PREFIXES_V) {
-
-}
-
-town_names(PREFIXES_SPECIAL) {
-
-}
-
-town_names(SUFFIXES) {
-    
-}
-
-town_names(V_SUFFIXES) {
-    
-}
-
-town_names(ROOT_SUFFIX) {
-    {
-
-    }
-}
-
-town_names(PREFIX_ROOT_SUFFIX) {
-    {
-        town_names(PREFIXES,6),
-        town_names(PREFIXES_SPECIAL,1)
-    }
-    {
-        town_names(ROOT_SUFFIX,1),
+        town_names(MAIN_NAMES,2),
+        town_names(PREFIXED_NAMES,1),
+        town_names(SUFFIXED_NAMES,3),
+        town_names(ROOTS,1)
     }
 }
