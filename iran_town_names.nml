@@ -1,0 +1,71 @@
+grf {
+	grfid: "IR\01\01";
+	name: string(STR_GRF_NAME);
+	desc: string(STR_GRF_DESC);
+	version: 0;
+	min_compatible_version: 0;
+}
+
+town_names {
+    styles: string(TTD_MENU_NAME);
+    {
+        town_names(MAIN_NAMES,1),
+        town_names(PREFIX_ROOT_SUFFIX,2)
+    }
+}
+
+town_names(MAIN_NAMES) {
+
+}
+
+town_names(ROOTS) {
+
+}
+
+town_names(ROOTS_V) {
+
+}
+
+town_names(V_ROOTS) {
+
+}
+
+town_names(V_ROOTS_V) {
+
+}
+
+town_names(PREFIXES) {
+
+}
+
+town_names(PREFIXES_V) {
+
+}
+
+town_names(PREFIXES_SPECIAL) {
+
+}
+
+town_names(SUFFIXES) {
+    
+}
+
+town_names(V_SUFFIXES) {
+    
+}
+
+town_names(ROOT_SUFFIX) {
+    {
+
+    }
+}
+
+town_names(PREFIX_ROOT_SUFFIX) {
+    {
+        town_names(PREFIXES,6),
+        town_names(PREFIXES_SPECIAL,1)
+    }
+    {
+        town_names(ROOT_SUFFIX,1),
+    }
+}
